@@ -1,0 +1,188 @@
+/*fontes importadas*/
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 30px;
+  background-color: white;
+}
+
+/*logo*/
+.devlogo {
+    width: 9%;
+  font-weight: bold;
+}
+
+/*barra de navegação*/
+nav a {
+  font-family: 'Share Tech Mono', monospace;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+/*efeito ao passar o mouse*/
+nav a:hover {
+  color: #8F003E; /* Cor do texto ao passar o mouse */
+}
+
+nav .social-links {
+  display: flex;
+  gap: 50px; /* Adiciona espaço entre os ícones de redes sociais */
+}
+
+nav .social-links a {
+  margin: 0; /* Remove margens adicionais para os ícones */
+}
+
+
+.breadcrumb {
+    font-family: 'Share Tech Mono', monospace;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right,  #8F003E, #43002D, #881D7D);
+  color: white;
+  padding: 10px 40px;
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+}
+
+/*container de navegação entre as categorias*/
+aside {
+  width: 20%;
+  background: linear-gradient(to bottom,  #8F003E, #43002D, #881D7D);
+}
+
+.aside-list {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding: 10px;
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  color: white;
+}
+
+.aside-list li {
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+  padding: 5px;
+  background: rgba(192, 180, 180, 0.1); /* Fundo semitransparente */
+  border-radius: 10px;
+}
+
+/*passar o mouse*/
+.aside-list li:hover {
+  background: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+  cursor: pointer;
+}
+
+/* Remove os marcadores das listas aninhadas */
+.aside-list ul {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding-left: 15px; /* Adiciona um recuo para diferenciar os itens aninhados */
+}
+
+.aside-list li ul li {
+  font-size: 13px; /* Tamanho menor para os itens aninhados */
+  margin-bottom: 5px; /* Espaçamento entre os itens aninhados */
+}
+
+.aside-list li ul li:hover {
+  background: rgba(255, 255, 255, 0.15); /* Efeito ao passar o mouse nos itens aninhados */
+  cursor: pointer;
+}
+
+.content h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 24px;
+  margin-bottom: -25px;
+   margin-left: 30px; /* Adiciona espaço à esquerda */
+}
+
+/*produtos*/
+.content {
+  width: 100%;
+  padding: 10px;
+}
+
+.content h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 24px;
+  margin-bottom: -40px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: -30px; /* Ajusta o espaçamento entre as colunas e as linhas */
+  margin: 50px; /* Remove margens externas que possam estar criando espaço adicional */
+}
+
+.product {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 8px;
+  border-color: #000;
+  text-align: center;
+  margin: 0; /* Garantir que não há margens extras */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Garante que os itens dentro da .product se distribuam de maneira mais compacta */
+}
+
+/* Permitir zoom nos produtos ao passar o mouse */
+
+.product img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border: 0.5px solid;
+  border-radius: 8px;
+  box-shadow: 0 5px 6px rgba(143, 0, 62, 0.2),
+              0 10px 10px rgba(67, 0, 45, 0.15),
+              0 10px 14px rgba(136, 29, 125, 0.1);
+  margin: 0 auto; /* Garante que as imagens fiquem centralizadas */
+}
+
+/*efeito ao passar o mouse*/
+.product:hover img {
+   transform: scale(1.9); /* Aumenta o tamanho do produto em 10% */
+  transition: transform 0.3s ease; /* Transição suave */
+  z-index: 10; /* Garante que o produto fique acima dos outros durante o zoom */
+}
+
+
+/*legenda dos produtos*/
+.product p {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  margin: 10px 0 2px;
+  font-weight: bold;
+  text-align: left;
+  color: #131313; /* Cor da legenda (ex: cinza escuro) */
+}
+
+.product span {
+  font-family: 'Share Tech Mono', monospace;
+  color: #8F003E; /* Cor do preço */
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.product p,
+.product span {
+  width: 100%;
+}
